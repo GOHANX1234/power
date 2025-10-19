@@ -70,20 +70,29 @@ export default function Register() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background px-4 bg-gradient-to-br from-background via-background to-purple-950/20 moving-glow">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-background px-4 bg-gradient-to-br from-background via-background to-purple-950/20 moving-glow">
+      <a 
+        href="https://t.me/Gohan52" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="block text-center mb-4 text-green-500 hover:text-green-400 transition-colors text-[8px]"
+        data-testid="link-telegram-text"
+      >
+        悟飯
+      </a>
       <Card className="max-w-sm w-full border border-purple-500/30 shadow-xl shadow-purple-500/10 backdrop-blur-sm bg-background/80 form-border-glow relative z-10">
         <CardContent className="pt-6">
-          <div className="text-center mb-8 float">
-            <div className="flex items-center justify-center gap-2 mb-2">
+          <div className="text-center mb-8">
+            <div className="flex items-center justify-center gap-1.5 mb-1">
               <div className="relative" data-testid="icon-sharingan-register">
-                <Eye className="text-purple-500 text-2xl h-8 w-8" />
+                <Eye className="text-purple-500 h-5 w-5" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                  <div className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></div>
                 </div>
               </div>
-              <h1 className="text-4xl font-bold text-primary bg-gradient-to-r from-purple-500 to-indigo-600 bg-clip-text text-transparent pb-1 glow-text shine-effect">POWER CHEAT</h1>
+              <h1 className="text-2xl font-bold text-primary bg-gradient-to-r from-purple-500 to-indigo-600 bg-clip-text text-transparent pb-1 matrix-font">POWER CHEAT</h1>
             </div>
-            <p className="text-muted-foreground mt-2">Reseller Registration</p>
+            <p className="text-muted-foreground text-sm mt-1">Reseller Registration</p>
           </div>
 
           <Form {...form}>
