@@ -515,8 +515,18 @@ export default function AdminCreateKeys() {
                             type="number"
                             min="1"
                             max="365"
-                            value={field.value.toString()}
-                            onChange={(e) => field.onChange(parseInt(e.target.value) || 30)}
+                            value={field.value}
+                            onChange={(e) => {
+                              const value = e.target.value;
+                              if (value === '') {
+                                field.onChange('' as any);
+                              } else {
+                                const parsed = parseInt(value);
+                                if (!isNaN(parsed)) {
+                                  field.onChange(parsed);
+                                }
+                              }
+                            }}
                             className="focus:border-purple-500 focus:ring-purple-500"
                             data-testid="input-days"
                           />
@@ -541,8 +551,18 @@ export default function AdminCreateKeys() {
                               type="number"
                               min="1"
                               max="100"
-                              value={field.value.toString()}
-                              onChange={(e) => field.onChange(parseInt(e.target.value) || 1)}
+                              value={field.value}
+                              onChange={(e) => {
+                                const value = e.target.value;
+                                if (value === '') {
+                                  field.onChange('' as any);
+                                } else {
+                                  const parsed = parseInt(value);
+                                  if (!isNaN(parsed)) {
+                                    field.onChange(parsed);
+                                  }
+                                }
+                              }}
                               className="focus:border-purple-500 focus:ring-purple-500"
                               data-testid="input-key-count"
                             />
